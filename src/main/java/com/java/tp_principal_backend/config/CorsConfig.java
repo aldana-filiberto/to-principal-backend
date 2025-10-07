@@ -13,10 +13,11 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                		.allowedOrigins("https://mi-frontend.netlify.app")
+                registry.addMapping("/**") // todas las rutas
+                        .allowedOrigins("http://localhost:5173") // dominio permitido
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                       .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }

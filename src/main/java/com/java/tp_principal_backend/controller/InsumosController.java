@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "https://tp-principal-frontend.netlify.app")
 @RestController
 @RequestMapping("/productos/insumos")
 public class InsumosController {
